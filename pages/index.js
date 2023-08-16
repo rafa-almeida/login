@@ -1,5 +1,5 @@
 import TemplateDefault from '../src/templates/Default'
-import { Root, Imagem, Papers, AvPrincipal, Formulario, } from '../src/style/styles'
+import { Root, Imagem, Papers, AvPrincipal, Formulario, Font } from '../src/style/styles'
 
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
@@ -35,9 +35,11 @@ export default function Home() {
                   <LockOutlinedIcon />
                 </Avatar>
               </AvPrincipal>
-              <Typography component="h1" variant="h5">
-                Acesse a sua conta
-              </Typography>
+              <Font>
+                <Typography component="h1" variant="h5">
+                  Acesse a sua conta
+                </Typography>
+              </Font>
               <Formulario>
                 <form  Validate>
                   <TextField
@@ -78,11 +80,6 @@ export default function Home() {
                       <Link href="#" variant="body2">
                         Não tem uma conta?
                         Cadastre-se
-                      </Link>
-                    </Grid>
-                    <Grid item>
-                      <Link href="#" variant="body2">
-                        Crie sua conta
                       </Link>
                     </Grid>
                   </Grid>

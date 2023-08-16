@@ -26,7 +26,7 @@ export const Root= styled.div `
         overflow: hidden;
     }
 
-    @media (min-width: 769px) and (max-width: 1023px) {
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
     /* media query utilizado para tablets e notebooks */
         position: absolute;
         top: 0;
@@ -37,7 +37,7 @@ export const Root= styled.div `
         
        
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1240px)  {
     /* media query utilizado para notebooks e computadores desktops */
         position: absolute;
         top: 0;
@@ -79,7 +79,7 @@ export const Imagem= styled.div `
         width: 100%; 
     }
 
-    @media (min-width: 769px) and (max-width: 1023px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
     /* media query utilizado para tablets e notebooks */
         opacity: 0.6;
         display: block;
@@ -89,7 +89,7 @@ export const Imagem= styled.div `
         height: 20%;
         width: 100%; 
     }
-    @media (min-width: 1024px) and (max-width: 1440px) {
+    @media (min-width: 1024px) and (max-width: 1240px) {
     /* media query utilizado para notebooks e computadores desktops */
         opacity: 0.6;
         display: block;
@@ -180,7 +180,7 @@ export const Papers= styled.div `
 
 
 
-    @media (min-width: 769px) and (max-width: 1023px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
     /* media query utilizado para tablets e notebooks */
     position: relative;
     width: 80%;
@@ -203,13 +203,13 @@ export const Papers= styled.div `
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
-    @media (min-width: 1024px) and (max-width: 1440px) {
+    @media (min-width: 1024px) and (max-width: 1240px) {
     /* media query utilizado para notebooks e computadores desktops */
     position: relative;
     width: 80%;
     height: 30em;
     margin: 0 auto;
-    left: 150px;
+    
     top: 19px;
     border-radius: 3px;
     padding: 0 10px 0 10px;
@@ -236,6 +236,12 @@ export const AvPrincipal= styled.div `
 export const Formulario= styled.div `
     
     width: '100%'; 
+    
+    
+`;
+
+export const Font= styled.div `
+    padding-top: 10px;
     
     
 `;
