@@ -77,7 +77,7 @@ export default function Home() {
                   
                   <Grid container>
                     <Grid item xs>
-                      <Link href="#" variant="body2">
+                      <Link to="/register" variant="body2">
                         Não tem uma conta?
                         Cadastre-se
                       </Link>
