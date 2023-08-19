@@ -1,6 +1,6 @@
 import TemplateDefault from '../src/templates/Default'
 import { Root, Imagem, Papers, AvPrincipal, Formulario, Font } from '../src/style/styles'
-
+import { BrowserRouter, Link } from 'react-router-dom';
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -8,16 +8,20 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
+
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 
 
+import Register from './register'
+
 export default function Home() {
   return (
+    
     <TemplateDefault>
+     
       <Root>
         <Grid container component="main" >
           
@@ -41,7 +45,7 @@ export default function Home() {
                 </Typography>
               </Font>
               <Formulario>
-                <form  Validate>
+                <form Validate>
                   <TextField
                     variant="outlined"
                     margin="normal"
@@ -77,7 +81,7 @@ export default function Home() {
                   
                   <Grid container>
                     <Grid item xs>
-                      <Link to="/register" variant="body2">
+                      <Link to="/Register" variant="body2">
                         Não tem uma conta?
                         Cadastre-se
                       </Link>
@@ -89,6 +93,8 @@ export default function Home() {
           </Grid>
       </Grid>
     </Root>
+    
     </TemplateDefault>
+   
   )
 }

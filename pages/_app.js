@@ -8,7 +8,7 @@ import theme from '../src/theme';
 export default function MyApp(props) {
   const { Component, pageProps } = props;
 
-  return (
+  return (  
     <React.Fragment>
       <Head>
         <title>My page</title>

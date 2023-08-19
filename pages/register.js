@@ -1,6 +1,6 @@
 import React from 'react';
 import TemplateDefault from '../src/templates/Default'
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { Root, Imagem, Papers, AvPrincipal, Formulario, Font } from '../src/style/styles'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -13,7 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography'
 
-export default function Home() {
+export default function Register() {
     return (
         
         <TemplateDefault>
@@ -93,14 +93,13 @@ export default function Home() {
                                 fullWidth
                                 variant="contained"
                                 color="primary"
-                                
                                 >
                                 Cadastrar
                                 </Button>
                             
                             <Grid container>
                                 <Grid item xs>
-                                <Link to="#" variant="body2">
+                                <Link to="/" variant="body2">
                                     Acesse nossa política de privacidade
                                 </Link>
                                 </Grid>
@@ -111,6 +110,7 @@ export default function Home() {
                     </Grid>
                 </Grid>
             </Root>
+           
         </TemplateDefault>
     )
 };
