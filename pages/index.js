@@ -1,7 +1,8 @@
 import TemplateDefault from '../src/templates/Default'
 import { Root, Imagem, Papers, AvPrincipal, Formulario, Font } from '../src/style/styles'
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import React from 'react';
+import Link from "next/link"
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -15,7 +16,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 
 
-import Register from './register'
+
 
 export default function Home() {
   return (
@@ -81,7 +82,7 @@ export default function Home() {
                   
                   <Grid container>
                     <Grid item xs>
-                      <Link to="/Register" variant="body2">
+                      <Link href="/register" variant="body2">
                         Não tem uma conta?
                         Cadastre-se
                       </Link>

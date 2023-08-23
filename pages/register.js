@@ -1,6 +1,7 @@
 import React from 'react';
 import TemplateDefault from '../src/templates/Default'
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter, } from 'react-router-dom';
+import Link from "next/link"
 import { Root, Imagem, Papers, AvPrincipal, Formulario, Font } from '../src/style/styles'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -57,6 +58,17 @@ export default function Register() {
                                 margin="normal"
                                 required
                                 fullWidth
+                                id="Endereco"
+                                label="Digite o seu endereço"
+                                name="endereco"
+                                autoComplete="endereço"
+                                autoFocus
+                            />
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
                                 id="email"
                                 label="Digite seu E-mail"
                                 name="email"
@@ -99,7 +111,7 @@ export default function Register() {
                             
                             <Grid container>
                                 <Grid item xs>
-                                <Link to="/" variant="body2">
+                                <Link href="#" variant="body2">
                                     Acesse nossa política de privacidade
                                 </Link>
                                 </Grid>
