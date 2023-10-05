@@ -1,4 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
+
 import TemplateDefault from '../src/templates/Default'
 import { BrowserRouter, } from 'react-router-dom';
 import Link from "next/link"
@@ -15,6 +19,24 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography'
 
 export default function Register() {
+
+    const schema = yup.object({
+        nome: yup.string().required(),
+        email: yup.string().required().email("Email inválido"),
+        password: yup.number().required().min(6),
+    });
+
+    const { 
+        handleSubmit, 
+        register, 
+    } = useForm({
+        resolver: yupResolver(schema)
+    });
+
+    const save = (data) => {
+        console.log(data)
+    };
+
     return (
         
         <TemplateDefault>
@@ -40,8 +62,8 @@ export default function Register() {
                                 Crie a sua conta
                             </Typography>
                         </Font>
-                        <Formulario>
-                            <form  Validate>
+                        <Formulario >
+                            <form onSubmit={handleSubmit(save)}  >
                             <TextField
                                 variant="outlined"
                                 margin="normal"
@@ -52,52 +74,49 @@ export default function Register() {
                                 name="nome"
                                 autoComplete="nome"
                                 autoFocus
+                                {...register("nome")}
+                                
                             />
+                            
                             <TextField
                                 variant="outlined"
                                 margin="normal"
-                                required
-                                fullWidth
-                                id="Endereco"
-                                label="Digite o seu endereço"
-                                name="endereco"
-                                autoComplete="endereço"
-                                autoFocus
-                            />
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
+                                
                                 fullWidth
                                 id="email"
-                                label="Digite seu E-mail"
+                                label="Digite um e-mail válido"
                                 name="email"
-                                autoComplete="email"
                                 autoFocus
+                                autoComplete="email" 
+                                {...register("email")}
+                                                                
                             />
                             <TextField
                                 variant="outlined"
                                 margin="normal"
-                                required
+                                
                                 fullWidth
                                 name="password"
                                 label="Digite a sua Senha"
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
+                                {...register("password")}
+                                
                             />
                             <TextField
                                 variant="outlined"
                                 margin="normal"
-                                required
+                                
                                 fullWidth
                                 name="password"
                                 label="Digite a sua Senha Novamente"
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
+                                {...register("password")}
                             />
-                                <span> A senha deve possuir 6 caracteres, conter números e uma letra maiúscula</span>
+                                <span> A senha deve possuir no mínimo 6 caracteres, e possuir somente números</span>
 
                             
                                 <Button

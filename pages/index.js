@@ -1,7 +1,7 @@
 import TemplateDefault from '../src/templates/Default'
 import { Root, Imagem, Papers, AvPrincipal, Formulario, Font } from '../src/style/styles'
 import { BrowserRouter} from 'react-router-dom';
-import React from 'react';
+import React, { useState }from 'react';
 import Link from "next/link"
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -14,11 +14,14 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-
-
+import * as yup from "yup"
+import { Formik, Form } from "formik"
 
 
 export default function Home() {
+
+  
+
   return (
     
     <TemplateDefault>
@@ -46,7 +49,8 @@ export default function Home() {
                 </Typography>
               </Font>
               <Formulario>
-                <form Validate>
+                
+                <form Validate >
                   <TextField
                     variant="outlined"
                     margin="normal"
@@ -59,6 +63,7 @@ export default function Home() {
                     autoFocus
                   />
                   <TextField
+                  
                     variant="outlined"
                     margin="normal"
                     required
@@ -82,13 +87,14 @@ export default function Home() {
                   
                   <Grid container>
                     <Grid item xs>
-                      <Link href="/register" variant="body2">
+                      <Link a href="/register" variant="body2">
                         Não tem uma conta?
                         Cadastre-se
                       </Link>
                     </Grid>
                   </Grid>
                 </form>
+                
               </Formulario>
             </Papers>
           </Grid>
